@@ -29,10 +29,10 @@ const mapStateToProps = state => ({
 
 // funciones que se pasan por propiedades
 const mapDispatchToProps = dispatch => ({
-    agregarTitular(jugadores) {
+    agregarTitular(jugador) {
         dispatch({
             type: "AGREGAR_TITULAR",
-            jugadores
+            jugador
         })
     }
 })

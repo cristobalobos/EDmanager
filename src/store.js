@@ -29,6 +29,14 @@ const initialState = {
  */
 const reducerManager = (state = initialState, action) => {
   console.log(action);
+
+  if (action.type === 'AGREGAR_TITULAR') {
+    return {
+      ...state,
+      titulares: state.titulares.concat(action.jugador),
+    };
+  }
+
   return state;
 };
 

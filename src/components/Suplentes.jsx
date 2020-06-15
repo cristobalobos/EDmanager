@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const Suplentes = ({ suplentes }) => {
+const Suplentes = ({ suplentes }) => (
     <section>
         <div className="suplentes">
             {
@@ -17,7 +17,7 @@ const Suplentes = ({ suplentes }) => {
             }
         </div>
     </section>
-}
+)
 
 const mapStateToProps = state => ({
     suplentes: state.suplentes
