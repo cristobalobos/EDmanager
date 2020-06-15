@@ -28,6 +28,7 @@ const initialState = {
  * @param {object} action change in state
  */
 const reducerManager = (state = initialState, action) => {
+  console.log(action);
   return state;
 };
 
