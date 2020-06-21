@@ -28,12 +28,11 @@ const initialState = {
  * @param {object} action change in state
  */
 const reducerManager = (state = initialState, action) => {
-  console.log(action);
-
   if (action.type === 'AGREGAR_TITULAR') {
     return {
       ...state,
       titulares: state.titulares.concat(action.jugador),
+      jugadores: state.jugadores.filter((j) => j.id !== action.jugador.id),
     };
   }
 
