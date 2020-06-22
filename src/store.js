@@ -43,6 +43,14 @@ const reducerManager = (state = initialState, action) => {
       jugadores: state.jugadores.filter((j) => j.id !== action.jugador.id),
     };
   }
+
+  if (action.type === 'QUITAR_TITULAR') {
+    return {
+      ...state,
+      titulares: state.titulares.filter((j) => j.id !== action.jugador.id),
+      jugadores: state.jugadores.concat(action.jugador),
+    };
+  }
   return state;
 };
 
