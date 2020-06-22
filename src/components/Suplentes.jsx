@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 const Suplentes = ({ suplentes }) => (
     <section>
+        <h2>Suplentes</h2>
         <div className="suplentes">
             {
                 suplentes.map(j => (
