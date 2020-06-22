@@ -51,6 +51,14 @@ const reducerManager = (state = initialState, action) => {
       jugadores: state.jugadores.concat(action.jugador),
     };
   }
+
+  if (action.type === 'QUITAR_SUPLENTE') {
+    return {
+      ...state,
+      suplentes: state.suplentes.filter((j) => j.id !== action.jugador.id),
+      jugadores: state.jugadores.concat(action.jugador),
+    };
+  }
   return state;
 };
 
